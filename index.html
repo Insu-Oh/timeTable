@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chang's Timetable</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <style>
+    table {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+  <table border="1">
+    <thead>
+      <th></th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Tur</th>
+      <th>Fri</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>8:00 - 10:00</td>
+        <td v-for="t in table" v-bind:key="t.time">Lecturer: {{t.lecturer}}/ Subject: {{t.subject}}</td>
+      </tr>
+      <tr>
+        <td>10:00 - 12:00</td>
+        <td v-for="t in table1">Lecturer: {{t.lecturer}}/ Subject: {{t.subject}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="text" v-model="input.index">
+  <input type="text" v-model="input.lecturer">
+  <input type="text" v-model="input.subject">
+  <button @click="add(input.index)">ADD</button>
+</div>
+  <script src="main.js"></script>
+</body>
+</html>
