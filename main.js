@@ -9,28 +9,28 @@ var app = new Vue({
     },
     table: [{
         index: 0,
-        lecturer: 'kim',
-        subject: 'math'
+        lecturer: null,
+        subject: null
       }],
     table1: [{
-        index: 1,
-        lecturer: 'kim',
-        subject: 'math'
+        index: 0,
+        lecturer: null,
+        subject: null
       }],
     table2: [{
-        index: 1,
-        lecturer: 'kim',
-        subject: 'math'
+        index: 0,
+        lecturer: null,
+        subject: null
       }],
     table3: [{
-        index: 1,
-        lecturer: 'kim',
-        subject: 'math'
+        index: 0,
+        lecturer: null,
+        subject: null
       }],
     table4: [{
-        index: 1,
-        lecturer: 'kim',
-        subject: 'math'
+        index: 0,
+        lecturer: null,
+        subject: null
       }],
     },
   created: function() {
