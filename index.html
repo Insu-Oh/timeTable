@@ -32,12 +32,37 @@
         <td>10:00 - 12:00</td>
         <td v-for="t in table1">Lecturer: {{t.lecturer}}/ Subject: {{t.subject}}</td>
       </tr>
+      <tr>
+        <td>12:00 - 14:00</td>
+        <td v-for="t in table2">Lecturer: {{t.lecturer}}/ Subject: {{t.subject}}</td>
+      </tr>
+      <tr>
+        <td>14:00 - 16:00</td>
+        <td v-for="t in table3">Lecturer: {{t.lecturer}}/ Subject: {{t.subject}}</td>
+      </tr>
+      <tr>
+        <td>16:00 - 18:00</td>
+        <td v-for="t in table4">Lecturer: {{t.lecturer}}/ Subject: {{t.subject}}</td>
+      </tr>
     </tbody>
   </table>
-  <input type="text" v-model="input.index">
-  <input type="text" v-model="input.lecturer">
-  <input type="text" v-model="input.subject">
-  <button @click="add(input.index)">ADD</button>
+  <select name="" id="selectDay" v-model="input.index">
+    <option value="0">8:00-10:00</option>
+    <option value="1">10:00-12:00</option>
+    <option value="2">12:00-14:00</option>
+    <option value="3">14:00-16:00</option>
+    <option value="4">16:00-18:00</option>
+  </select>
+  <select name="" id="selectTime" v-model="input.day">
+    <option value="0">Mon</option>
+    <option value="1">Tue</option>
+    <option value="2">Wed</option>
+    <option value="3">Tur</option>
+    <option value="4">Fri</option>
+  </select>
+  <input type="text" v-model="input.lecturer" placeholder="Lecturer">
+  <input type="text" v-model="input.subject" placeholder="Subject">
+  <button @click="add(input.index, input.day)">ADD</button>
 </div>
   <script src="main.js"></script>
 </body>
